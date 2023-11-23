@@ -41,10 +41,15 @@ int main() {
 
     printf("Qual o ano desejado para a consulta?\n");
     scanf("%d", &meuServico.data_servico.ano);
-    printf("A data desejada para a consulta é: %02d/%02d/%04d\n", meuServico.data_servico.dia, meuServico.data_servico.mes, meuServico.data_servico.ano);
+    printf("A data desejada para a consulta é: %02d/%02d/%04d\n\n\n", meuServico.data_servico.dia, meuServico.data_servico.mes, meuServico.data_servico.ano);
 
     printf("Qual o seu nome completo?\n");
     scanf("%s", meuServico.cliente.nome_do_cliente);
-
+    
+    printf("Qual seu numero de telefone:\n");
+    scanf("%s", meuServico.cliente.telefone_do_cliente);
+    
+    printf("Senhor(a): %s, poderia informar o nome do Animal?", meuServico.cliente.nome_do_cliente);
+    scanf("%s", meuServico.pet.nome_do_animal);
     return 0;
 }
