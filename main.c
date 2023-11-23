@@ -23,6 +23,7 @@ typedef struct {
 typedef struct {
     int identificador;
     Data data_servico;
+    Cliente cliente;  // Include a Cliente structure here
     Animal pet;
     int tipo_de_servico;
     char pago;
@@ -42,7 +43,8 @@ int main() {
     scanf("%d", &meuServico.data_servico.ano);
     printf("A data desejada para a consulta é: %02d/%02d/%04d\n", meuServico.data_servico.dia, meuServico.data_servico.mes, meuServico.data_servico.ano);
 
-
+    printf("Qual o seu nome completo?\n");
+    scanf("%s", meuServico.cliente.nome_do_cliente);
 
     return 0;
 }
