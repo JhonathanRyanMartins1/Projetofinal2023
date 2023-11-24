@@ -15,15 +15,15 @@ typedef struct {
 
 typedef struct {
     char nome_do_animal[50];
-    char especie; // ou int especie, se necessário
+    char especie; 
     Data data_nascimento;
-    int agressivo; // ou char agressivo, dependendo do uso
+    int agressivo; 
 } Animal;
 
 typedef struct {
     int identificador;
     Data data_servico;
-    Cliente cliente;  // Include a Cliente structure here
+    Cliente cliente; 
     Animal pet;
     int tipo_de_servico;
     char pago;
