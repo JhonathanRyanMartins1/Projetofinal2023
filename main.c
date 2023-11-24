@@ -2,6 +2,11 @@
 #include <string.h>
 #include <math.h>
 
+int numero;
+int limitador1,
+limitador2,
+limitador3;
+
 typedef struct {
     int dia;
     int mes;
@@ -49,7 +54,34 @@ int main() {
     printf("Qual seu numero de telefone:\n");
     scanf("%s", meuServico.cliente.telefone_do_cliente);
     
-    printf("Senhor(a): %s, poderia informar o nome do Animal?", meuServico.cliente.nome_do_cliente);
+    printf("Senhor(a): %s, poderia informar o nome do Animal?\n", meuServico.cliente.nome_do_cliente);
     scanf("%s", meuServico.pet.nome_do_animal);
-    return 0;
+    printf("Digite o número que corresponde a especie do seu animal:");
+    printf("\n1.Cachorro\n2.Gato\n3.Passaro\n4.Outro\n");
+    scanf("%d", &numero);
+   switch (numero) {
+        case 1:
+            printf("Especie selecionada: Cachorro\n");
+            break;
+        case 2:
+            printf("Especie selecionada: Gato\n");
+            
+            break;
+        case 3:
+            printf("Especie selecionada: Passaro\n");
+            
+            break;
+        case 4:
+            printf("Especie selecionada: Outro\n");
+            
+            break;
+        default:
+            printf("Opção inválida\n");
+            return 1;
 }
+
+    
+            return 0;
+}        
+
+   
