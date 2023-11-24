@@ -41,14 +41,19 @@ int main() {
 
     printf("Qual o dia desejado para a consulta?\n");
     scanf("%d", &meuServico.data_servico.dia);
+    for(int i=0;i>=31;i++){
      if (meuServico.data_servico.dia < 1 || meuServico.data_servico.dia > 31) {
+         
         printf("Dia inválido. O dia deve estar entre 1 e 31.\n");
+     }
         return 1; 
     }
     printf("Qual o mes desejado para a consulta?\n");
     scanf("%d", &meuServico.data_servico.mes);
 if (meuServico.data_servico.mes < 1 || meuServico.data_servico.mes > 12) {
+    
         printf("Mês inválido. O mês deve estar entre 1 e 12.\n");
+    
         return 1;
 }
     printf("Qual o ano desejado para a consulta?\n");
