@@ -37,6 +37,7 @@ typedef struct {
 int main() {
     Servico meuServico;
     meuServico.identificador = 1;
+    
 
     printf("Qual o dia desejado para a consulta?\n");
     scanf("%d", &meuServico.data_servico.dia);
@@ -65,32 +66,35 @@ if (meuServico.data_servico.ano < 2000 || meuServico.data_servico.ano > 2023) {
     
     printf("Senhor(a): %s, poderia informar o nome do Animal?\n", meuServico.cliente.nome_do_cliente);
     scanf("%s", meuServico.pet.nome_do_animal);
-    printf("Digite o número que corresponde a especie do seu animal:");
-    printf("Digite o número que corresponde à espécie do seu animal:\n");
-    printf("1. Cachorro\n2. Gato\n3. Pássaro\n4. Outro\n");
-    scanf("%d", &numero);
+    for (;;) {
+        printf("Digite o número que corresponde à espécie do seu animal:\n");
+        printf("1. Cachorro\n2. Gato\n3. Pássaro\n4. Outro\n");
+        scanf("%d", &numero);
 
-switch (numero) {
-    case 1:
-        printf("Espécie selecionada: Cachorro\n");
-        meuServico.pet.especie = 'C';
-        break;
-    case 2:
-        printf("Espécie selecionada: Gato\n");
-        meuServico.pet.especie = 'G';
-        break;
-    case 3:
-        printf("Espécie selecionada: Pássaro\n");
-        meuServico.pet.especie = 'P';
-        break;
-    case 4:
-        printf("Espécie selecionada: Outro\n");
-        meuServico.pet.especie = 'O';
-        break;
-    default:
-        printf("Opção inválida\n");
-        return 1;
-}
+        switch (numero) {
+            case 1:
+                printf("Espécie selecionada: Cachorro\n");
+                meuServico.pet.especie = 'C';
+                break;
+            case 2:
+                printf("Espécie selecionada: Gato\n");
+                meuServico.pet.especie = 'G';
+                break;
+            case 3:
+                printf("Espécie selecionada: Pássaro\n");
+                meuServico.pet.especie = 'P';
+                break;
+            case 4:
+                printf("Espécie selecionada: Outro\n");
+                meuServico.pet.especie = 'O';
+                break;
+            default:
+                printf("Opção inválida\n");
+                continue;  
+        }
+
+        break;  
+    }
 
     printf("Por favor, informe a data de nascimento do animal (dia mês ano):\n");
     scanf("%d %d %d", &meuServico.pet.data_nascimento.dia, &meuServico.pet.data_nascimento.mes, &meuServico.pet.data_nascimento.ano);
