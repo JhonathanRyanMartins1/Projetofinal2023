@@ -1,3 +1,8 @@
+/******************************************************************************
+Responsavel pelo Codigo:Jhonathan Ryan Martins
+Turma: EC41A-C11
+Trabalho Final Algoritmos 1 
+*******************************************************************************/
 
 
 #include <stdio.h>
