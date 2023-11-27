@@ -33,22 +33,22 @@ typedef struct {
     int tipo_de_servico;
     char pago;
 } Servico;
+    
+void verificarAgressividade(char agressivo);
 
 int main() {
     Servico meuServico;
     meuServico.identificador = 1;
-    
 
     printf("Qual o dia desejado para a consulta?\n");
     scanf("%d", &meuServico.data_servico.dia);
-    for(int i=0;i>=31;i++){
-     if (meuServico.data_servico.dia < 1 || meuServico.data_servico.dia > 31) {
-         
+
+    while (meuServico.data_servico.dia < 1 || meuServico.data_servico.dia > 31) {
         printf("Dia inválido. O dia deve estar entre 1 e 31.\n");
-     }
-        return 1; 
+        printf("Qual o dia desejado para a consulta?\n");
+        scanf("%d", &meuServico.data_servico.dia);
     }
-    printf("Qual o mes desejado para a consulta?\n");
+printf("Qual o mes desejado para a consulta?\n");
     scanf("%d", &meuServico.data_servico.mes);
 if (meuServico.data_servico.mes < 1 || meuServico.data_servico.mes > 12) {
     
@@ -104,12 +104,23 @@ if (meuServico.data_servico.ano < 2000 || meuServico.data_servico.ano > 2023) {
     printf("Por favor, informe a data de nascimento do animal (dia mês ano):\n");
     scanf("%d %d %d", &meuServico.pet.data_nascimento.dia, &meuServico.pet.data_nascimento.mes, &meuServico.pet.data_nascimento.ano);
     
+   
+
     printf("O seu animal é agressivo?\n");
     printf("Digite (S) para sim e (N) para não\n ");
-    scanf(" %c", &meuServico.pet.agressivo);  
+    scanf(" %c", &meuServico.pet.agressivo);
+    verificarAgressividade(meuServico.pet.agressivo);
 
-    
-            return 0;
-}        
+    return 0;
+}
 
-   
+// Implementação da função verificarAgressividade
+void verificarAgressividade(char agressivo) {
+    if (agressivo == 'S' || agressivo == 's') {
+        printf("Seu animal é agressivo.\n");
+    } else if (agressivo == 'N' || agressivo == 'n') {
+        printf("Seu animal não é agressivo.\n");
+    } else {
+        printf("Opção inválida.\n");
+    }
+}
