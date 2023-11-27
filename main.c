@@ -59,11 +59,11 @@ if (meuServico.data_servico.mes < 1 || meuServico.data_servico.mes > 12) {
     printf("Qual o ano desejado para a consulta?\n");
     scanf("%d", &meuServico.data_servico.ano);
     printf("A data desejada para a consulta é: %02d/%02d/%04d\n\n\n", meuServico.data_servico.dia, meuServico.data_servico.mes, meuServico.data_servico.ano);
-if (meuServico.data_servico.ano < 2000 || meuServico.data_servico.ano > 2023) {
-        printf("Ano inválido. O ano deve estar entre 2000 e 2023.\n");
+if (meuServico.data_servico.ano < 2000 || meuServico.data_servico.ano > 2050) {
+        printf("Ano inválido. O ano deve estar entre 2000 e 2050.\n");
         return 1;
 }
-    printf("Qual o seu nome completo?\n");
+    printf("Qual o seu nome?\n");
     scanf("%49s", meuServico.cliente.nome_do_cliente);
     
     printf("Qual seu numero de telefone:\n");
