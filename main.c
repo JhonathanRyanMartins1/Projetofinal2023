@@ -54,9 +54,9 @@ int main() {
     meuServico.identificador = 1;
 
 
-printf("************************************\n");
-    printf("** Bem-vindo(a) ao Sistema Veterinário **\n");
-    printf("************************************\n\n");
+printf("****************************************\n");
+    printf("** Bem-vindo(a) ao Sistema Veterinário *\n");
+    printf("****************************************\n\n");
     
     
     printf("Qual o dia desejado para a consulta?\n");
@@ -70,9 +70,14 @@ printf("************************************\n");
 
     printf("Qual o mês desejado para a consulta?\n");
     scanf("%d", &meuServico.data_servico.mes);
-
+    
     if (meuServico.data_servico.mes < MIN_MES || meuServico.data_servico.mes > MAX_MES) {
         printf("Mês inválido. O mês deve estar entre 1 e 12.\n");
+    while (meuServico.data_servico.mes < MIN_MES || meuServico.data_servico.mes > MAX_MES) {
+        
+        printf("Qual o mês desejado para a consulta?\n");
+        scanf("%d", &meuServico.data_servico.mes);
+        }
         return 1;
     }
 
@@ -81,6 +86,10 @@ printf("************************************\n");
 
     if (meuServico.data_servico.ano < MIN_ANO || meuServico.data_servico.ano > MAX_ANO) {
         printf("Ano inválido. O ano deve estar entre 2000 e 2050.\n");
+    while (meuServico.data_servico.ano < MIN_ANO || meuServico.data_servico.ano > MAX_ANO) {
+        printf("Qual o ano desejado para a consulta?\n");
+        scanf("%d", &meuServico.data_servico.ano);
+    }
         return 1;
     }
 
@@ -139,7 +148,7 @@ printf("************************************\n");
     verificarAgressividade(meuServico.pet.agressivo);
 
     printf("Qual o tipo de serviço desejado:\n");
-    printf("1. Banho\n2. Tosa\n3. Consulta Veterinária\n4. Hospedagem\n");
+    printf("1. Banho\n2. Tosa\n3. Consulta Veterinaria\n4. Hospedagem\n");
     
     int tipo_de_servico;
     scanf("%d", &tipo_de_servico);
@@ -153,7 +162,7 @@ printf("************************************\n");
             printf("Você escolheu Tosa.\n");
             break;
         case 3:
-            printf("Você escolheu Consulta Veterinária.\n");
+            printf("Você escolheu Consulta Veterinaria.\n");
             break;
         case 4:
             printf("Você escolheu Hospedagem.\n");
