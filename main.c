@@ -9,7 +9,7 @@ Trabalho Final Algoritmos 1
 #include <string.h>
 #include <math.h>
 
-#define MIN_DIA 1
+#define MIN_DIA 1               //Todas as defines foram utilizadas para delimitar o numero maximo que o usuario pode digitar
 #define MAX_DIA 31
 #define MIN_MES 1
 #define MAX_MES 12
@@ -49,7 +49,7 @@ void verificarPagamento(char pago);
 int main() {
     Servico meuServico;
     int numero;
-    meuServico.pago = 'N';  // Inicialização padrão para não pago
+    meuServico.pago = 'N';  
 
     meuServico.identificador = 1;
 
@@ -155,7 +155,7 @@ printf("************************************\n");
             break;
         default:
             printf("Opção inválida\n");
-            return 1;  // Encerre o programa se uma opção inválida for selecionada
+            return 1;  
     }
 
     printf("O serviço foi pago? Digite (S) para sim e (N) para não\n");
