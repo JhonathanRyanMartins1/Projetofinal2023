@@ -89,8 +89,13 @@ printf("************************************\n");
     printf("Qual o seu nome?\n");
     scanf("%49s", meuServico.cliente.nome_do_cliente);
     
-    printf("Qual seu número de telefone:\n");
-    scanf("%14s", meuServico.cliente.telefone_do_cliente);
+    do{
+        printf("Qual seu número de telefone:\n");
+        scanf("%14s", meuServico.cliente.telefone_do_cliente);
+        if(strlen(meuServico.cliente.telefone_do_cliente) != 12){
+            printf("Por favor, informe um número valido (DDD + 9 adicional + 8 digitos).\n");
+        }
+    }while(strlen(meuServico.cliente.telefone_do_cliente) != 12);
     
     printf("Senhor(a): %s, poderia informar o nome do animal?\n", meuServico.cliente.nome_do_cliente);
     scanf("%s", meuServico.pet.nome_do_animal);
