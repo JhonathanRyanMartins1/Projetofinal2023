@@ -162,44 +162,7 @@ printf("***************************************\n");
     printf("Senhor(a): %s, poderia informar o nome do animal?\n", meuServico.cliente.nome_do_cliente);
     scanf("%s", meuServico.pet.nome_do_animal);
 
-    for (;;) {
-        printf("Digite o número que corresponde à espécie do seu animal:\n");
-        printf("1. Cachorro\n2. Gato\n3. Pássaro\n4. Outro\n");
-        scanf("%d", &numero);
-    
-        printf("Espécie selecionada: Cachorro\n");
-                printf(for (;;) {
-        switch (numero) {
-            case 1:
-            "Digite a raça do %s :\n", meuServico.pet.nome_do_animal);
-                scanf("%d", &raçacachorro);
-                meuServico.pet.especie = 'C';
-                break;
-            case 2:
-                printf("Espécie selecionada: Gato\n"); 
-                printf("Digite a raça do %s :\n", meuServico.pet.nome_do_animal);
-                scanf("%d", &raçagato);
-                meuServico.pet.especie = 'G';
-                break;
-            case 3:
-                printf("Espécie selecionada: Pássaro\n");
-                printf("Digite a raça do %s :\n", meuServico.pet.nome_do_animal);
-                scanf("%d", &raçapassaro);
-                meuServico.pet.especie = 'P';
-                break;
-            case 4:
-                printf("Espécie selecionada: Outro\n");
-                meuServico.pet.especie = 'O';
-                break;
-            default:
-                printf("Opção inválida\n");
-                continue;
-
-        }
-}
-
-        break;
-    }
+   
     
     printf("Por favor, informe a data de nascimento do animal (dia mês ano):\n");
     scanf("%d %d %d", &meuServico.pet.data_nascimento.dia, &meuServico.pet.data_nascimento.mes, &meuServico.pet.data_nascimento.ano);
@@ -250,7 +213,7 @@ void verificarAgressividade(char agressivo) {
         printf("Opção inválida.\n");
     }
 }
-
+    return 1;
 void verificarPagamento(char pago) {
     if (pago == 'S' || pago == 's') {
         printf("O serviço foi pago.\n");
@@ -262,3 +225,4 @@ void verificarPagamento(char pago) {
     printf("Obrigado pela preferencia");
 }
 }
+
